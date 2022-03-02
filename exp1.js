@@ -15,12 +15,3 @@ Object.entries(nothing).forEach(e =>{
     var value = e[1];
     console.log(key, value);
 })
-
-// function handleFunction(){
-//     console.log(nothing);
-//     nothing.forEach(element => {
-//         console.log(element.keys(nothing));
-//     });
-// }
-
-// handleFunction();
