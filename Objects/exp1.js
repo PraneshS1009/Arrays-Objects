@@ -15,7 +15,12 @@ console.log(nothing);
 nothing.age = 22;
 console.log(nothing);
 
-let nothing1 = nothing;
+let nothing1;
 
-nothing1.name = 'Prabhu';
-console.log(nothing1, nothing);
+
+nothing.job = 'Developer';
+delete nothing.work;
+
+console.log(nothing);
+
+
