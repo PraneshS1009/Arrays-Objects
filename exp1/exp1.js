@@ -31,13 +31,26 @@ console.log(number1sort);
 //     console.log(topping);
 // })
 
-console.log('----------------------------------');
-function myFunction(value, index, orginalvalue){
-    orginalvalue[index-1]?console.log(orginalvalue[index-1]): "";
-    console.log(value);
-    orginalvalue[index+1]?console.log(orginalvalue[index+1]): "";
+// console.log('----------------------------------');
+// function myFunction(value, index, orginalvalue){
+//     orginalvalue[index-1]?console.log(orginalvalue[index-1]): "";
+//     console.log(value);
+//     orginalvalue[index+1]?console.log(orginalvalue[index+1]): "";
     
-    console.log('++++++++++++++');
+//     console.log('++++++++++++++');
+// }
+
+// toppings.forEach(myFunction);
+
+
+var nothing = [`1i`,`2i`,`3i`,`4i`,`5i`,`6i`,`7i`,`8i`,`9i`,];
+
+
+function myFunction(nothing1){  
+    return `+  ${nothing1}  +`;
 }
 
-toppings.forEach(myFunction);
+nothing.forEach(myFunction);
+
+var nothing2 = nothing.map(myFunction);
+console.log(nothing2);
