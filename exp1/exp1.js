@@ -56,22 +56,34 @@ console.log(number1sort);
 // console.log(nothing2);
 
 
-var person = [{
-    age :26,
-    name : `Prabhu`,
-},{
-    age : 44,
-    name : `Ram`,
-},{
-    age : 75,
-    name : `Palani`,
-}];
-console.log(person);
+// var person = [{
+//     age :26,
+//     name : `Prabhu`,
+// },{
+//     age : 44,
+//     name : `Ram`,
+// },{
+//     age : 75,
+//     name : `Palani`,
+// }];
+// console.log(person);
 
-var over40 = person.filter(function(clean) {
-    if(clean.age>40){
-        return true;
-    }
-})
+// var over40 = person.filter(function(clean) {
+//     if(clean.age>40){
+//         return true;
+//     }
+// })
 
-console.table(over40);
+// console.table(over40);
+
+var ordertotals = [342, 1002, 523, 34, 634, 854, 1644, 2222];
+console.log(`------------------`);
+function isTotal(tally, currentitemprice){
+    console.log(`Current tally is ${tally}`);
+    console.log(`Current item price is ${currentitemprice}`);
+    console.log(`------------------`);
+    return tally+currentitemprice;
+}
+
+var allorders = ordertotals.reduce(isTotal, 0);
+console.log(`Total amount of tally is ${allorders}`)
