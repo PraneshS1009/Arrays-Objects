@@ -76,14 +76,37 @@ console.log(number1sort);
 
 // console.table(over40);
 
-var ordertotals = [342, 1002, 523, 34, 634, 854, 1644, 2222];
+// var ordertotals = [342, 1002, 523, 34, 634, 854, 1644, 2222];
+// console.log(`------------------`);
+// function isTotal(tally, currentitemprice){
+//     console.log(`Current tally is ${tally}`);
+//     console.log(`Current item price is ${currentitemprice}`);
+//     console.log(`------------------`);
+//     return tally+currentitemprice;
+// }
+
+// var allorders = ordertotals.reduce(isTotal, 0);
+// console.log(`Total amount of tally is ${allorders}`);
+
+
 console.log(`------------------`);
+var item = [
+    {type : `shirt`, price : 4000},
+    {type : `shirt`, price : 4532},
+    {type : `shirt`, price : 234},
+    {type : `shirt`, price : 2343},
+    {type : `shirt`, price : 2343},
+    {type : `shirt`, price : 542},
+    {type : `shirt`, price : 123},
+];
+// console.log(item);
+
 function isTotal(tally, currentitemprice){
     console.log(`Current tally is ${tally}`);
-    console.log(`Current item price is ${currentitemprice}`);
-    console.log(`------------------`);
-    return tally+currentitemprice;
+    console.log(`Current item price is ${currentitemprice.price}`);
+    console.log(`---------------------`);
+    return tally+currentitemprice.price;
 }
 
-var allorders = ordertotals.reduce(isTotal, 0);
-console.log(`Total amount of tally is ${allorders}`)
+var totalprice = item.reduce(isTotal, 0);
+console.log(`Total amount of tally is ${totalprice}`);
