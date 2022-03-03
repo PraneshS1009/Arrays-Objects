@@ -1,6 +1,6 @@
 console.log("Fine");
 
-var toppings = ["mushroom","tomatoes",,"eggs","chili","lettuce","avacado","chiles","bacon","pickles","onions"];
+var toppings = ["mushroom","tomatoes","eggs","chili","lettuce","avacado","chiles","bacon","pickles","onions"];
 console.log(toppings);
 
 var feedback = [
@@ -21,3 +21,23 @@ var burgrating = feedback.find(findBurgRating);
 console.log(burgrating);
 
 
+var number1 = [1,2,100,3,200,400,155];
+
+var number1sort = number1.sort((firstitem, seconditem) => firstitem - seconditem);
+console.log(number1sort);
+
+
+// toppings.forEach(topping => {
+//     console.log(topping);
+// })
+
+console.log('----------------------------------');
+function myFunction(value, index, orginalvalue){
+    orginalvalue[index-1]?console.log(orginalvalue[index-1]): "";
+    console.log(value);
+    orginalvalue[index+1]?console.log(orginalvalue[index+1]): "";
+    
+    console.log('++++++++++++++');
+}
+
+toppings.forEach(myFunction);
