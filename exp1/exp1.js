@@ -43,14 +43,35 @@ console.log(number1sort);
 // toppings.forEach(myFunction);
 
 
-var nothing = [`1i`,`2i`,`3i`,`4i`,`5i`,`6i`,`7i`,`8i`,`9i`,];
+// var nothing = [`1i`,`2i`,`3i`,`4i`,`5i`,`6i`,`7i`,`8i`,`9i`,];
 
 
-function myFunction(nothing1){  
-    return `+  ${nothing1}  +`;
-}
+// function myFunction(nothing1){  
+//     return `+  ${nothing1}  +`;
+// }
 
-nothing.forEach(myFunction);
+// nothing.forEach(myFunction);
 
-var nothing2 = nothing.map(myFunction);
-console.log(nothing2);
+// var nothing2 = nothing.map(myFunction);
+// console.log(nothing2);
+
+
+var person = [{
+    age :26,
+    name : `Prabhu`,
+},{
+    age : 44,
+    name : `Ram`,
+},{
+    age : 75,
+    name : `Palani`,
+}];
+console.log(person);
+
+var over40 = person.filter(function(clean) {
+    if(clean.age>40){
+        return true;
+    }
+})
+
+console.table(over40);
