@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Snake_Game</h1>
+        <div class="inner">
+            <div class="snakebox">
+                <div class="snake">
+                    <div class="ele2 snakebody"></div>
+                    <div class="ele3 snakebody"></div>
+                    <div class="ele1 head"></div>
+                </div>
+            </div>
+            <div class="message">
+                <p class="textmsg"></p>
+            </div>
+        </div>
+        <button class="newgame" onclick="newGame()">New_Game</button>
+    </div>
+    <script src="index.js"></script>
+    <style>
+        body{
+            background-color: fuchsia;
+            overflow: hidden;
+        }
+        .main{
+            display: grid;
+            justify-content: center;
+        }
+        .message{
+            width: 250px;
+            height: 100px;
+            
+            margin-top: -350px;
+            margin-left: 300px;
+        }
+        .textmsg{
+            color: red;
+            text-align: center;
+            font-size: 30px;
+        }
+        .newgame{
+            margin-top:225px;
+            background-color: greenyellow;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            width: 150px;
+            cursor: pointer;
+            font-weight: 700;
+            visibility: hidden;
+        }
+        h1{
+            text-align: center;
+            color: aliceblue;
+            font-size: 40px;
+            
+        }
+        .snakebox{
+            border: 20px solid red;
+            background-color: antiquewhite;
+            width: 800px;
+            height: 500px;
+            position: relative;
+            z-index: -1;
+        }
+        .snake{            
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(3,10px);
+            --x : 0px;
+            --y : 0px;
+            transform:  translateX(var(--x)) translateY(var(--y));
+            max-width: fit-content;
+        }
+        .head{
+            width: 10px;
+            height: 10px;
+            border: 1px solid black;
+            background-color: aqua;
+            border-radius: 0 10px 10px 0;
+        }
+        .snakebody{
+            width: 10px;
+            height: 10px;
+            border: 1px solid black;
+            background-color: blueviolet;
+        }
+
+    </style>
+</body>
+</html>
