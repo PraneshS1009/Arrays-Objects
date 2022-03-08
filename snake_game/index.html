@@ -16,12 +16,14 @@
                     <div class="ele3 snakebody"></div>
                     <div class="ele1 head"></div>
                 </div>
+                <div class="food"></div>
             </div>
             <div class="message">
                 <p class="textmsg"></p>
             </div>
         </div>
         <button class="newgame" onclick="newGame()">New_Game</button>
+        <p class="info"></p>
     </div>
     <script src="index.js"></script>
     <style>
@@ -56,6 +58,11 @@
             font-weight: 700;
             visibility: hidden;
         }
+        .info{
+            margin-top: -50px;
+            margin-left: 500px;
+            text-align: right;
+        }
         h1{
             text-align: center;
             color: aliceblue;
@@ -69,22 +76,38 @@
             height: 500px;
             position: relative;
             z-index: -1;
+            overflow: hidden;
         }
         .snake{            
             position: absolute;
             display: grid;
-            grid-template-columns: repeat(3,10px);
+            --grid : 3;
+            grid-template-columns: repeat(var(--grid),10px);
+            grid-template-rows: 10px;
             --x : 0px;
             --y : 0px;
-            transform:  translateX(var(--x)) translateY(var(--y));
+            --z : 0deg;
+            transform:  translateX(var(--x)) translateY(var(--y)) rotate(var(--z));
             max-width: fit-content;
+            z-index: 5;
+        }
+        .food{
+            position: absolute;
+            --xfood : 0px;
+            --yfood : 0px;
+            transform: translateX(var(--xfood)) translateY(var(--yfood));
+            border-radius: 5px;
+            border: none;
+            width: 8px;
+            height: 8px;
+            background-color: crimson;
         }
         .head{
             width: 10px;
             height: 10px;
             border: 1px solid black;
             background-color: aqua;
-            border-radius: 0 10px 10px 0;
+            border-radius: 10px 10px 10px 10px;
         }
         .snakebody{
             width: 10px;
