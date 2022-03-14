@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This-Keyword</title>
+    <style>
+        button{
+            width: 150px;
+            height: 60px;
+            background-color: coral;
+            border: none;
+            color: aliceblue;
+        }
+        button:focus{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <button class="butt1">Button_1</button>
+    <button class="butt2">Button_2</button>
+    <script>
+        console.log("Working");
+        var butt1 = document.querySelector(`.butt1`);
+        var butt2 = document.querySelector(`.butt2`);
+        function tellMeButt(){
+            console.log(this);
+            var me = this;
+            setTimeout(function(){
+                me.textContent= 'Some one clicked me';
+                console.log(this);
+            },1000)
+        }
+        butt1.addEventListener('click', tellMeButt);
+        butt2.addEventListener('click', tellMeButt);
+
+    </script>
+</body>
+</html>
