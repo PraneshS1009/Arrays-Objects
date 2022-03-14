@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind-Call-Apply</title>
+</head>
+<body>
+    <script>
+        var person = {
+            name : 'Ram',
+            sayHi(){
+                console.log(this);
+                console.log(`Hey ${person.name}`);
+                return `Hey ${person.name}`;
+            }
+        };
+        var sayHi = person.sayHi.bind(person);
+
+        var bill ={
+            total : 1000,
+            calCulate:function(taxrate){
+                console.log(this);
+                console.log(calCulate(0.13));
+            }
+        }
+        var total = bill.calCulate(0.13);
+        var cal = bill.calCulate.bind({total:500},);
+        console.log(calCulate(0.13));
+
+    </script>
+</body>
+</html>
