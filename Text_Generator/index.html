@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+        }
+        .main{
+            background-color: blueviolet;
+            width: 500px;
+            padding: 20px;
+        }
+        label{
+            line-height: 44px;
+        }
+        .text{
+            background-color: blueviolet;
+            padding: 20px;
+            width: 450px;
+            border: none;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        .result{
+            overflow-x: scroll;
+            padding: 20px;
+            width: 450px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <label for="upperto-lowerto">
+            <input type="radio" value="uppertolowerto" id="uppertolowerto" name="filter" checked>
+            Upper-to-lower Lower-to-upper
+        </label><br>
+        <label for="funky">
+            <input type="radio" value="funky" id="funky" name="filter">
+            Funky
+        </label><br>
+        <label for="unable">
+            <input type="radio" value="unable" id="unable" name="filter">
+            Unable to stucture a sentence
+        </label><br>
+        <textarea class="text" placeholder="Type here"></textarea>
+        <div class="result"></div>
+    </div>
+
+
+    <script src="text-generator.js"></script>
+</body>
+</html>
