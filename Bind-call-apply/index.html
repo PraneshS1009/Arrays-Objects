@@ -20,14 +20,14 @@
 
         var bill ={
             total : 1000,
-            calCulate:function(taxrate){
+            calculate:function(taxrate){
                 console.log(this);
-                console.log(calCulate(0.13));
+                console.log(calculate(0.13));
             }
         }
-        var total = bill.calCulate(0.13);
-        var cal = bill.calCulate.bind({total:500},);
-        console.log(calCulate(0.13));
+        var total = bill.calculate(0.13);
+        var cal = bill.calculate.bind({total:500},);
+        console.log(calculate(0.13));
 
     </script>
 </body>
